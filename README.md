@@ -7,7 +7,7 @@ FTP learns per-layer projection constraints to encourage a fine-tuned model to s
 ## Create conda environment
 - The environment uses Ubuntu 18.04, Pytorch 1.7 supported on CUDA 11.x and python 3.8. 
 ```
-cd FTP_demo
+cd FTP
 conda env create -f environment.yml
 conda activate ftp
 ```
