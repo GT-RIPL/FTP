@@ -1,5 +1,5 @@
 # Fast Trainable Projection (FTP)
- This repo implements the DomainNet robust finetuning experiments in the paper [``Fast Trainable Projection for Robust Fine-Tuning (NeurIPS23)``](https://arxiv.org/abs/2303.10720).
+ This repo implements the DomainNet robust finetuning experiments in the paper [``Fast Trainable Projection for Robust Fine-Tuning (NeurIPS23)``](https://arxiv.org/abs/2310.19182).
 
 ## Overview
 FTP learns per-layer projection constraints to encourage a fine-tuned model to stay close to its pre-trained initialization. It can be integrated into existing optimizers such as Adam and SGD, and used as drop-in replacement of them for better robust fine-tuning. In this repo, we provide the implementation of AdamP (Adam + FTP) and SGDP (SGD + FTP) in  `util/FTP.py`.
