@@ -124,3 +124,7 @@ Training
 Blog
 About
 Loading complete
+
+# Project specific folders
+log/
+pre_trained/

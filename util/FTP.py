@@ -279,8 +279,9 @@ class AdamP(Optimizer):
          lr: float,
          weight_decay: float,
          eps: float):
-
-        for i, (param, name, pre) in enumerate(zip(group['params'],group['name'],group['pre'])):
+        
+        i = 0
+        for param, name, pre in zip(group['params'],group['name'],group['pre']):
             if param.grad is None: 
                 continue
             grad = param.grad
@@ -305,6 +306,7 @@ class AdamP(Optimizer):
                 denom = (exp_avg_sq.sqrt() / math.sqrt(bias_correction2)).add_(eps)
 
             step_size = lr / bias_correction1
+            i += 1
             
             # FTP step
             d_p = step_size * exp_avg/denom + lr * weight_decay * param
