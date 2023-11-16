@@ -172,7 +172,7 @@ def train(logdir, args):
     print("start testing")
     sites = ["real", "sketch", "painting", "infograph", "clipart"]
     datasets = [
-        get_loader("test", name=args.dataset, root=args.root, site=site)
+        get_loader("test", name=args.dataset, root=args.root,  data_dir=args.data_dir, site=site)
         for site in sites
     ]
     loaders = [
